@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Internet News - Emotion Survey</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles/style_all.css">
+    <link rel="stylesheet" type="text/css" href="styles/style_index.css">
 </head>
 
 <body>
@@ -18,8 +19,7 @@
                 English). The data collected from this survey will be statistically analysed to draw research
                 conclusions in the domain of language communication and emotion. <b>The survey is anonymous.</b></p>
         </div>
-        <form action="test.php" method="post">
-            <!--action to be included-->
+        <form action="login_validation.php" method="post"> 
             <div class="upper-row-wrapper">
                 <div class="input-field-wrapper">
                     <label for="nlanguage">Native Language:</label>
@@ -31,8 +31,8 @@
                 </div>
             </div>
             <div class="lower-row-wrapper">
-                <button id=submit-btn class="button" value="submit-btn">Submit</button>
-                <button id=reset-btn class="button" value="reset-btn" type="reset">Reset</button>
+                <button id=submit-btn class="button" name="submit-btn" type="submit">Submit</button>
+                <button id=reset-btn class="button" name="reset-btn" type="reset">Reset</button>
             </div>
         </form>
     </div>

@@ -1,0 +1,22 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #b0c4de;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-wrapper{
+    width: 800px;
+    height: 100%;
+    background-color: #FEFEFA;
+    border-radius: 2%;
+    box-shadow: 0 0 10px 5px #A9A9A9;
+}
+
