@@ -5,7 +5,7 @@ Text evokes emotion in readers. This website's purpose is to collect data, which
 
 ## TODO
 
-1. Cookies? Sessions?
+1. Add session support so that error variables variables can be passed between pages. 
 2. Dropdown menu for languages or open field?
 3. Suppress errors when site goes live. (error_reporting(...);)
 4. Additional checks for user - should they be allowed re-entering the website? What if user already exists?
