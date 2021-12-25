@@ -1,0 +1,100 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #b0c4de;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-wrapper{
+    width: 800px;
+    height: 100%;
+    background-color: #FEFEFA;
+    border-radius: 2%;
+    box-shadow: 0 0 10px 5px #A9A9A9;
+}
+
+.description p{
+    text-align: justify;
+    padding: 0 20px;
+}
+
+h1{
+    margin: 50px 0;
+    text-align: center;
+}
+
+form{
+    margin-top: 50px; 
+}
+
+.upper-row-wrapper{
+    width: 370px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-field-wrapper{
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.input-field-wrapper label{
+    display: block;
+}
+
+.lower-row-wrapper {
+    width: 370px;
+    margin: 0 auto;
+}
+
+.articles-wrapper{
+    width: 250px;
+    margin: 0 auto;
+
+
+}
+
+.article{
+    display: flex;
+    justify-content: space-between;
+}
+
+.article:nth-child(5){
+    margin-bottom: 10px;
+}
+
+.button{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.submit-btn {
+    background-color: #808000;
+}
+
+.reset-btn {
+    background-color: #ed1c24;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
