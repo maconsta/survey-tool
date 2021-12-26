@@ -24,48 +24,47 @@
                     <label><a href="here we should put query to db to get news link" target="_blank">Article 1</a></label>
                     <div class=radio-btn-wrapper>
                         <label>A</label>
-                        <input type="radio" name="article1" required>
+                        <input type="radio" name="article1" value="A" required>
                         <label>B</label>
-                        <input type="radio" name="article1" required>
+                        <input type="radio" name="article1" value="B" required>
                     </div>
                 </div>
                 <div class="article">
                     <label><a href="here we should put query to db to get news link" target="_blank">Article 2</a></label>
                     <div class=radio-btn-wrapper>
                         <label>A</label>
-                        <input type="radio" name="article2" required>
+                        <input type="radio" name="article2" value="A" required>
                         <label>B</label>
-                        <input type="radio" name="article2" required>
+                        <input type="radio" name="article2" value="B" required>
                     </div>
                 </div>
                 <div class="article">
                     <label><a href="here we should put query to db to get news link" target="_blank">Article 3</a></label>
                     <div class=radio-btn-wrapper>
                         <label>A</label>
-                        <input type="radio" name="article3" required>
+                        <input type="radio" name="article3" value="A" required>
                         <label>B</label>
-                        <input type="radio" name="article3" required>
+                        <input type="radio" name="article3" value="B" required>
                     </div>
                 </div>
                 <div class="article">
                     <label><a href="here we should put query to db to get news link" target="_blank">Article 4</a></label>
                     <div class=radio-btn-wrapper>
                         <label>A</label>
-                        <input type="radio" name="article4" required>
+                        <input type="radio" name="article4" value="A" required>
                         <label>B</label>
-                        <input type="radio" name="article4" required>
+                        <input type="radio" name="article4" value="B" required>
                     </div>
                 </div>
                 <div class="article">
                     <label><a href="here we should put query to db to get news link" target="_blank">Article 5</a></label>
                     <div class=radio-btn-wrapper>
                         <label>A</label>
-                        <input type="radio" name="article5" required>
+                        <input type="radio" name="article5" value="A" required>
                         <label>B</label>
-                        <input type="radio" name="article5" required>
+                        <input type="radio" name="article5" value="B" required>
                     </div>
                 </div>
-
                 <div class="lower-row-wrapper">
                     <button class="button submit-btn" value="submit-btn">Submit</button>
                     <button class="button reset-btn" value="reset-btn" type="reset">Reset</button>
