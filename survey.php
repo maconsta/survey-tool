@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION["redirected"])) {
+    header("Location: index.html");
+}
+
+session_unset();
+?>
+
 <!DOCTYPE HTML>
 
 <html>
@@ -17,8 +26,7 @@
                 conclusions in the domain of language communication and emotion. <b>The survey is anonymous.</b></p>
         </div>
         <form action="response.php" method="post">
-            <!--action to be included-->
-            
+
             <div class="articles-wrapper">
                 <div class="article">
                     <label><a href="here we should put query to db to get news link" target="_blank">Article 1</a></label>

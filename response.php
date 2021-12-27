@@ -8,4 +8,6 @@
         $article5=$_POST["article5"];
 
         // code to put the answers in the database...
+    }else{
+        header("Location: index.html");
     }

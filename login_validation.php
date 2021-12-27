@@ -1,7 +1,9 @@
 <?php
 
+session_start();
+
 if (isset($_POST["submit-btn"])) {
-    require "database.php";
+    require "includes/database.php";
     $nlanguage = $_POST["nlanguage"];
     $email = $_POST["email"];
 
@@ -15,7 +17,10 @@ if (isset($_POST["submit-btn"])) {
         mysqli_stmt_bind_param($statement, "ss", $nlanguage, $email);
         mysqli_stmt_execute($statement);
         mysqli_stmt_store_result($statement);
+        $_SESSION["redirected"]=true;
         header("Location: survey.php");
         exit();
     }
+}else{
+    header("Location: index.html");
 }

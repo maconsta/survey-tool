@@ -6,6 +6,6 @@ Text evokes emotion in readers. This website's purpose is to collect data, which
 ## TODO
 
 1. Suppress errors when site goes live. (error_reporting(...);)
-2. For the database: trial is primary key in user_variants
-3. variant_id да се промени на int(11)
-4. Queries...
+2. Queries...
+3. Only defuser is allowed to ssh (22) into the server
+4. Block user from going back to survey.php after completing the survey
