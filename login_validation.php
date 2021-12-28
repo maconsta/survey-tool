@@ -11,7 +11,7 @@ if (isset($_POST["submit-btn"])) {
     $statement = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($statement, $query)) {
-        header("Location: index.php?error=sql_error");
+        header("Location: index.html?error=sql_error");
         exit();
     } else {
         mysqli_stmt_bind_param($statement, "ss", $nlanguage, $email);
