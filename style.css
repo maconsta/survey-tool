@@ -38,7 +38,7 @@ form{
     width: 370px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .input-field-wrapper{
@@ -50,13 +50,18 @@ form{
     display: block;
 }
 
-.lower-row-wrapper {
-    width: 370px;
+.index-lower-row-wrapper {
+    width: 156px;
+    margin: 0 auto;
+}
+
+.survey-lower-row-wrapper {
+    width: 550px;
     margin: 0 auto;
 }
 
 .articles-wrapper{
-    width: 250px;
+    width: 550px;
     margin: 0 auto;
 
 
@@ -93,8 +98,40 @@ form{
     background-color: #ed1c24;
 }
 
-a:hover, a:visited, a:link, a:active
-{
-    text-decoration: none;
+a{
+    color: blue !important;
+    text-decoration: none !important;
 }
 
+.sentence{
+    min-width: 380px;
+}
+
+.column-description > span{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.feedback > textarea {
+    width: 400px;
+    height: 200px;
+}
+
+.feedback-wrapper{
+    margin: 0 auto;
+    width: 406px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start
+}
+
+input#email{
+    width: 200px;
+    outline-width: 0;
+
+}
+
+textarea#opinion{
+    outline-width: 0;
+    resize: none;
+}
