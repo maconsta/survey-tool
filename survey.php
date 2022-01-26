@@ -83,7 +83,7 @@ if (!$_SESSION["redirected"]) {
 </head>
 
 <body>
-    <div class="main-wrapper">
+    <main>
         <h1>Internet News - Emotion Survey</h1>
         <div class="description">
             <p>Each article in the table below is followed by a short description and two buttons. Group the items into two groups <b>A</b> and <b>B</b> according to the similiarity in the emotions that the texts evoked in you.</p>
@@ -150,7 +150,19 @@ if (!$_SESSION["redirected"]) {
                 </div>
             </div>
         </form>
-    </div>
+</main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-img">
+                <a href="https://computerscience.nbu.bg/">
+                    <img id="logo" src="images/NBU.png" alt="logo">
+                    <span id="dept-name">Department of Informatics</span>
+                </a>
+            </div>
+            <a id="login-link" href="admin.php">Admin</a>
+        </div>
+    </footer>
 </body>
 
 </html>

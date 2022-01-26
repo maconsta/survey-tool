@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="main-wrapper">
+    <main>
         <h1>Internet News - Emotion Survey</h1>
         <div class="description">
             <p>You will be asked to read <b>five</b> news items in English and then group together the ones that invoke
@@ -98,13 +98,37 @@
                         <option value="Xhosa">Xhosa</option>
                     </select>
                 </div>
+                <div class="input-field-wrapper">
+                    <label for="english_level">Level of English:</label>
+                    <select name="english_level" id="english_level" required>
+                        <option value="">Choose a Level...</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                        <option value="Proficient">Proficient</option>
+                        <option value="Bilingual or Native">Bilingual or Native</option>
+                    </select>
+                </div>
             </div>
+
             <div class="index-lower-row-wrapper">
                 <button class="button submit-btn" name="submit-btn" type="submit">Submit</button>
                 <button class="button reset-btn" name="reset-btn" type="reset">Reset</button>
             </div>
         </form>
-    </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-img">
+                <a href="https://computerscience.nbu.bg/">
+                    <img id="logo" src="images/NBU.png" alt="logo">
+                    <span id="dept-name">Department of Informatics</span>
+                </a>
+            </div>
+            <a id="login-link" href="admin.php">Admin</a>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -1,10 +1,10 @@
 <?php
 
-if (isset($_POST["submit-btn"])) {
+if(isset($_POST["submit-btn"])){
     require "includes/database.php";
 
-    $email = $_POST["email"];
-    $opinion = $_POST["opinion"];
+    $email=$_POST["email"];
+    $opinion=$_POST["opinion"];
 
     $query = "INSERT INTO feedback (email, opinion) VALUES (?,?)";
     $statement = mysqli_stmt_init($conn);
@@ -17,5 +17,5 @@ if (isset($_POST["submit-btn"])) {
         mysqli_stmt_execute($statement);
         mysqli_stmt_store_result($statement);
     }
-    header("Location: response.php");
+    header("Location: index.html");
 }

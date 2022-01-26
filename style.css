@@ -9,15 +9,17 @@ body{
     margin: 0;
     height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.main-wrapper{
+main{
     width: 800px;
     height: 100%;
     background-color: #FEFEFA;
     border-radius: 2%;
     box-shadow: 0 0 10px 5px #A9A9A9;
+    margin-bottom: 10px;
 }
 
 .description p{
@@ -35,10 +37,10 @@ form{
 }
 
 .upper-row-wrapper{
-    width: 370px;
+    width: 300px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .input-field-wrapper{
@@ -51,7 +53,7 @@ form{
 }
 
 .index-lower-row-wrapper {
-    width: 156px;
+    width: 300px;
     margin: 0 auto;
 }
 
@@ -99,8 +101,8 @@ form{
 }
 
 a{
-    color: blue !important;
-    text-decoration: none !important;
+    color: blue ;
+    text-decoration: none ;
 }
 
 .sentence{
@@ -134,4 +136,62 @@ input#email{
 textarea#opinion{
     outline-width: 0;
     resize: none;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-content{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-img > a{
+    display: flex;
+    align-items: center;
+}
+
+#dept-name{
+    margin-left: 5px;
+    font-weight: bold;
+    color: rgba(8, 63, 136, 0.9);
+    font-size: 30px;
+    width: 200px;
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
+}
+
+#login-link{
+    font-size:20px;
+}
+
+.description > h2 {
+    padding: 0 20px;
+}
+
+.login-field-wrapper{
+    width: 260px;
+    margin-left: 20px;
+}
+
+.form-group{
+    margin: 5px 0;
+}
+
+.description > h3{
+    padding: 20px;
+}
+
+#spaced{
+    display: flex;
+    justify-content: space-between;
 }

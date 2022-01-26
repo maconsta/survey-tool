@@ -97,10 +97,12 @@ if (isset($_POST["submit-btn"])) {
 </head>
 
 <body>
-    <div class="main-wrapper">
+    <main>
         <h1>Thank you for taking the time to read provide answers for this survey.</h1>
         <div class="description">
-            <p> You can leave feedback by filling in the form below:</p>
+            <h3>You can now exit the survey by closing this window.</h3>
+            <p>Are you interested in doing the survey again? Click <a href="index.html">here</a>.</p>
+            <p>You can leave feedback by filling in the form below:</p>
         </div>
         <form action="feedback.php" method="post">
             <div class="feedback-wrapper">
@@ -114,11 +116,21 @@ if (isset($_POST["submit-btn"])) {
                 </div>
                 <div class="lower-row-wrapper">
                     <button class="button submit-btn" name="submit-btn" value="submit-btn">Submit</button>
-                    <!-- <button class="button reset-btn" value="reset-btn" type="reset">Reset</button> -->
                 </div>
             </div>
         </form>
-    </div>
+</main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-img">
+                <a href="https://computerscience.nbu.bg/">
+                    <img id="logo" src="images/NBU.png" alt="logo">
+                    <span id="dept-name">Department of Informatics</span>
+                </a>
+            </div>
+            <a id="login-link" href="admin.php">Admin</a>
+        </div>
+    </footer>
 </body>
 
 </html>
