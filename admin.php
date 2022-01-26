@@ -25,16 +25,16 @@ require "includes/database.php";
             <div class="login-field-wrapper">
                 <div class="form-group">
                     <label>Username</label>
-                    <input type="text" name="username">
+                    <input type="text" name="username" required>
                     <span class="invalid-feedback"></span>
                 </div>
                 <div class="form-group" id="spaced">
                     <label>Password</label>
-                    <input type="password" name="password">
+                    <input type="password" name="password" required>
                     <span class="invalid-feedback"></span>
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="button submit-btn" value="Login">
+                    <input type="submit" class="button submit-btn" name="submit-btn" value="Submit">
                 </div>
             </div>
         </form>
