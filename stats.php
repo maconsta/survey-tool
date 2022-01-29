@@ -27,6 +27,7 @@ if (!$_SESSION["redirected"]) {
     <meta charset="UTF-8">
     <title>Internet News - Emotion Survey</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="icon" href="images/icon.ico">
 </head>
 
 <body>

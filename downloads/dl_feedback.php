@@ -10,7 +10,7 @@ if ($_SESSION["from_link"] == true) {
 
     if ($query->num_rows > 0) {
         $delimiter = ",";
-        $filename = "members-data_" . date('Y-m-d') . ".csv";
+        $filename = "feedback_" . date('Y-m-d') . ".csv";
 
         // Create a file pointer 
         $f = fopen('php://memory', 'w'); 
