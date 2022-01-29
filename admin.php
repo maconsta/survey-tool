@@ -54,6 +54,7 @@ $_SESSION["from_link"] = false;
                     <span id="dept-name">Department of Informatics</span>
                 </a>
             </div>
+            <a id="login-link" href="index.html">Home</a>
         </div>
     </footer>
 
