@@ -6,7 +6,7 @@ if ($_SESSION["from_link"] == true) {
 
     require "../includes/database.php";
 
-    $query = $conn->query("SELECT * FROM user_variants ORDER BY trial ASC");
+    $query = $conn->query("SELECT * FROM evaluations ORDER BY trial ASC");
 
     if ($query->num_rows > 0) {
         $delimiter = ",";
@@ -14,15 +14,14 @@ if ($_SESSION["from_link"] == true) {
 
         // Create a file pointer 
         $f = fopen('php://memory', 'w');
-        $fields = array('USER ID', 'VARIANT', "TRIAL");
+        $fields = array('TRIAL', 'NEWS_ID', 'GROUPED');
         // Set column headers 
 
         fputcsv($f, $fields, $delimiter);
 
         // Output each row of the data, format line as csv and write to file pointer 
         while ($row = $query->fetch_assoc()) {
-            // $status = ($row['trial'] == 1) ? 'Active' : 'Inactive'; # remove, maybe?
-            $lineData = array($row['userId'], $row['variant'], $row['trial']);
+            $lineData = array($row['trial'], $row['newsId'], $row['grouped']);  
             fputcsv($f, $lineData, $delimiter);
         }
 

@@ -21,7 +21,6 @@ if ($_SESSION["from_link"] == true) {
 
         // Output each row of the data, format line as csv and write to file pointer 
         while ($row = $query->fetch_assoc()) {
-            // $status = ($row['trial'] == 1) ? 'Active' : 'Inactive'; # remove, maybe?
             $lineData = array($row['email'], $row['opinion']);
             fputcsv($f, $lineData, $delimiter);
         }

@@ -18,29 +18,32 @@ if (!$_SESSION["redirected"]) {
     $result = mysqli_query($link, $query);
     $row = mysqli_fetch_array($result);
 
-    $newsR1 = (int)$row['news1'];
-    $newsR2 = (int)$row['news2'];
-    $newsR3 = (int)$row['news3'];
-    $newsR4 = (int)$row['news4'];
-    $newsR5 = (int)$row['news5'];
+    //shuffles news to make sure that display is random
+    $news_arr = array();
+    $news_arr[0] = (int)$row['news1'];
+    $news_arr[1] = (int)$row['news2'];
+    $news_arr[2] = (int)$row['news3'];
+    $news_arr[3] = (int)$row['news4'];
+    $news_arr[4] = (int)$row['news5'];
+    shuffle($news_arr);
 
-    $query1 = "SELECT link_news, sentence FROM news WHERE newsId='$newsR1'";
+    $query1 = "SELECT link_news, sentence FROM news WHERE newsId='$news_arr[0]'";
     $res1 = mysqli_query($link, $query1);
     $row1 = mysqli_fetch_array($res1);
 
-    $query2 = "select link_news,sentence from news where newsId='$newsR2'";
+    $query2 = "select link_news,sentence from news where newsId='$news_arr[1]'";
     $res2 = mysqli_query($link, $query2);
     $row2    = mysqli_fetch_array($res2);
 
-    $query3 = "select link_news,sentence from news where newsId='$newsR3'";
+    $query3 = "select link_news,sentence from news where newsId='$news_arr[2]'";
     $res3 = mysqli_query($link, $query3);
     $row3    = mysqli_fetch_array($res3);
 
-    $query4 = "select link_news,sentence from news where newsId='$newsR4'";
+    $query4 = "select link_news,sentence from news where newsId='$news_arr[3]'";
     $res4 = mysqli_query($link, $query4);
     $row4    = mysqli_fetch_array($res4);
 
-    $query5 = "select link_news,sentence from news where newsId='$newsR5'";
+    $query5 = "select link_news,sentence from news where newsId='$news_arr[4]'";
     $res5 = mysqli_query($link, $query5);
     $row5    = mysqli_fetch_array($res5);
 
@@ -61,15 +64,13 @@ if (!$_SESSION["redirected"]) {
     $_SESSION['news3'] = $news3;
     $_SESSION['news4'] = $news4;
     $_SESSION['news5'] = $news5;
-    $_SESSION['newsId1'] = $newsR1;
-    $_SESSION['newsId2'] = $newsR2;
-    $_SESSION['newsId3'] = $newsR3;
-    $_SESSION['newsId4'] = $newsR4;
-    $_SESSION['newsId5'] = $newsR5;
+    $_SESSION['newsId1'] = $news_arr[0];
+    $_SESSION['newsId2'] = $news_arr[1];
+    $_SESSION['newsId3'] = $news_arr[2];
+    $_SESSION['newsId4'] = $news_arr[3];
+    $_SESSION['newsId5'] = $news_arr[4];
     $_SESSION['variant'] = $varint;
 }
-
-
 
 ?>
 
@@ -151,7 +152,7 @@ if (!$_SESSION["redirected"]) {
                 </div>
             </div>
         </form>
-</main>
+    </main>
 
     <footer>
         <div class="footer-content">

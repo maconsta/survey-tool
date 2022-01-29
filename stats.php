@@ -33,23 +33,14 @@ if (!$_SESSION["redirected"]) {
 
     <main>
         <div>
-            <span class="download-links">Click <a href="downloads/evaluations.php" target="_blank">here </a>to download evaluations.</span>
-            <span class="download-links">Click <a href="downloads/users.php" target="_blank">here </a>to download users.</span>
-            <span class="download-links">Click <a href="downloads/user_variants.php" target="_blank">here </a>to download user_variants.</span>
-            <span class="download-links">Click <a href="downloads/feedback.php" target="_blank">here </a>to download feedback.</span>
+            <span class="download-links">Click <a href="downloads/dl_evaluations.php" target="_blank">here </a>to download evaluations.</span>
+            <span class="download-links">Click <a href="downloads/dl_users.php" target="_blank">here </a>to download users.</span>
+            <span class="download-links">Click <a href="downloads/dl_user_variants.php" target="_blank">here </a>to download user_variants.</span>
+            <span class="download-links">Click <a href="downloads/dl_feedback.php" target="_blank">here </a>to download feedback.</span>
         </div>
         <?php
-        include_once 'includes/database.php';
 
-        /*	if (($open = fopen("source.csv", "r")) !== FALSE) 
-	{
-		fgetcsv($open); // Skips the first line of CSV file
-		while (($data = fgetcsv($open, 1000, ",")) !== FALSE) 
-		{
-			$inputArr[] = $data; 
-		}
-		fclose($open);
-	}*/
+        require 'includes/database.php';
 
         $query = $conn->query("SELECT newsId, grouped FROM evaluations");
 
@@ -64,13 +55,6 @@ if (!$_SESSION["redirected"]) {
 
         echo "<pre>";
 
-        /*
-	// To display array data
-    echo "NewsId ID\tGrouped";
-    foreach ( $inputArr as $var ) {
-        echo "\n", $var['newsId'], "\t\t", $var['grouped'];
-    }
-    */
         $fiveArr = array_chunk($inputArr, 5);
 
         // Fill 2D array with zeroes to index it
@@ -91,9 +75,6 @@ if (!$_SESSION["redirected"]) {
                 }
             }
         }
-
-        // Dumps the array, comment out if you want to see it
-        // var_dump($matrix);
 
         // Output a table
         $out  = "";
