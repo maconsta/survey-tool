@@ -2,13 +2,11 @@
 
 session_start();
 
-if ($_SESSION["from_link"]==true) {
+if ($_SESSION["from_link"] == true) {
 
-    $_SESSION["from_link"] = false;
+    require "../includes/database.php";
 
-    require "includes/database.php";
-
-    $query = $conn->query("SELECT * FROM evaluations ORDER BY trial ASC");
+    $query = $conn->query("SELECT * FROM user_variants ORDER BY trial ASC");
 
     if ($query->num_rows > 0) {
         $delimiter = ",";
@@ -16,15 +14,15 @@ if ($_SESSION["from_link"]==true) {
 
         // Create a file pointer 
         $f = fopen('php://memory', 'w');
-
+        $fields = array('USER ID', 'VARIANT', "TRIAL");
         // Set column headers 
-        $fields = array('TRIAL', 'NEWs_ID', 'GROUPED');
+
         fputcsv($f, $fields, $delimiter);
 
         // Output each row of the data, format line as csv and write to file pointer 
         while ($row = $query->fetch_assoc()) {
-            $status = ($row['trial'] == 1) ? 'Active' : 'Inactive';
-            $lineData = array($row['trial'], $row['newsId'], $row['grouped']);
+            // $status = ($row['trial'] == 1) ? 'Active' : 'Inactive'; # remove, maybe?
+            $lineData = array($row['userId'], $row['variant'], $row['trial']);
             fputcsv($f, $lineData, $delimiter);
         }
 
@@ -39,5 +37,5 @@ if ($_SESSION["from_link"]==true) {
         fpassthru($f);
     }
 } else {
-    header("Location: index.html");
+    header("Location: ../index.html");
 }

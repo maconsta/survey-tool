@@ -6,8 +6,5 @@ Text evokes emotion in readers. This website's purpose is to collect data, which
 ## TODO
 
 1. Suppress errors when site goes live. (error_reporting(...);)
-2. Queries...
-3. Only defuser is allowed to ssh (22) into the server
-4. Block user from going back to survey.php after completing the survey
-5. Project developed by CS@NBU; 
-6. Evaluations table is not updated if any user skips a trial auto incremented value;
+2. Only defuser is allowed to ssh (22) into the server
+3. AllowOverride All is set under /var/www in /etc/apache2/apache2.conf so that .htaccess can work

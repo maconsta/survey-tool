@@ -6,6 +6,7 @@ if (!$_SESSION["redirected"]) {
     header("Location: index.html");
 } else {
     $_SESSION["redirected"] = false;
+    $_SESSION["from_link"] = false;
 
     require("includes/database.php");
     $link = $conn;

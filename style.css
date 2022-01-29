@@ -15,7 +15,7 @@ body{
 
 main{
     width: 800px;
-    height: 100%;
+    height: 900px;
     background-color: #FEFEFA;
     border-radius: 2%;
     box-shadow: 0 0 10px 5px #A9A9A9;
@@ -33,7 +33,7 @@ h1{
 }
 
 form{
-    margin-top: 50px; 
+    margin: 50px 0; 
 }
 
 .upper-row-wrapper{
@@ -194,4 +194,15 @@ footer{
 #spaced{
     display: flex;
     justify-content: space-between;
+}
+
+.download-links{
+    display: block;
+    margin: 10px 10px 0;
+}
+
+pre{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
 }

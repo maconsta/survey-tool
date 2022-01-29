@@ -1,6 +1,9 @@
 <?php
 
-require "includes/database.php";
+
+session_start();
+$_SESSION["from_link"] = false;
+
 ?>
 
 
