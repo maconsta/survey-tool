@@ -5,6 +5,4 @@ Text evokes emotion in readers. This website's purpose is to collect data, which
 
 ## TODO
 
-1. Suppress errors when site goes live. (error_reporting(...);)
-2. AllowOverride All is set under /var/www in /etc/apache2/apache2.conf so that .htaccess can work
-3. Should news positions be randomly generated when being shown (currently - 3 negative and 2 positive)
+1. AllowOverride All is set under /var/www in /etc/apache2/apache2.conf so that .htaccess can work

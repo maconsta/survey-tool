@@ -65,8 +65,6 @@ form{
 .articles-wrapper{
     width: 550px;
     margin: 0 auto;
-
-
 }
 
 .article{
@@ -106,17 +104,12 @@ a{
 }
 
 .sentence{
-    min-width: 380px;
+    width: 380px;
 }
 
 .column-description > span{
     font-size: 16px;
     font-weight: bold;
-}
-
-.feedback > textarea {
-    width: 400px;
-    height: 200px;
 }
 
 .feedback-wrapper{
@@ -127,15 +120,17 @@ a{
     align-items:flex-start
 }
 
-input#email{
+#email{
     width: 200px;
     outline-width: 0;
 
 }
 
-textarea#opinion{
+#opinion{
     outline-width: 0;
     resize: none;
+    width: 400px;
+    height: 200px;
 }
 
 footer{
@@ -185,15 +180,12 @@ footer{
 
 .form-group{
     margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .description > h3{
     padding: 20px;
-}
-
-#spaced{
-    display: flex;
-    justify-content: space-between;
 }
 
 .download-links{
@@ -205,4 +197,93 @@ pre{
     margin-top: 30px;
     display: flex;
     justify-content: center;
+}
+
+#small-screen-warning{
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+
+    main{
+        width: 600px;
+    }
+
+    .footer-content{
+        width: 600px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    html, body{
+        overflow-x: hidden;
+    }
+
+    main{
+        width: 360px;
+    }
+
+    .footer-content{
+        width: 360px;
+    }
+
+    .articles-wrapper{
+        width: 320px;
+    }
+
+    .sentence{
+        width: 150px;
+        height: 21px;
+        overflow: hidden; /* or make the rows expand vertically? */
+    }
+
+    #logo{
+        width: 50px;
+        height: 50px;
+    }
+
+    #dept-name{
+        font-size: 15px;
+        width: 100px;
+    }
+
+    #login-link{
+        font-size: 15px;
+    }
+
+    .feedback-wrapper{
+        width: 320px;
+    }
+
+    #opinion{
+        width: 320px;
+    }
+
+}
+
+@media only screen and (max-width: 360px){
+    main{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+
+    #small-screen-warning{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #phone_rotate{
+        width: 100px;
+        height: 100px;
+    }
+
+    #small-screen-warning > h3{
+        margin: 20px;
+    }
 }

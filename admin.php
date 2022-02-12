@@ -13,6 +13,7 @@ $_SESSION["from_link"] = false;
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internet News - Emotion Survey</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="icon" href="images/icon.ico">
@@ -30,12 +31,10 @@ $_SESSION["from_link"] = false;
                 <div class="form-group">
                     <label>Username</label>
                     <input type="text" name="username" required>
-                    <span class="invalid-feedback"></span>
                 </div>
                 <div class="form-group" id="spaced">
                     <label>Password</label>
                     <input type="password" name="password" required>
-                    <span class="invalid-feedback"></span>
                 </div>
                 <div class="form-group">
                     <input type="submit" class="button submit-btn" name="submit-btn" value="Submit">
@@ -57,7 +56,10 @@ $_SESSION["from_link"] = false;
             <a id="login-link" href="index.html">Home</a>
         </div>
     </footer>
-
+    <div id="small-screen-warning">
+        <img id="phone_rotate" src="images/phone_rotate.gif" alt="phone_rotate">
+        <h3>Please, rotate your device to view the content of the page.</h3>
+    </div>
 </body>
 
 </html>

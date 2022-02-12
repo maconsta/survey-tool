@@ -92,6 +92,7 @@ if (isset($_POST["submit-btn"])) {
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internet News - Emotion Survey</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="icon" href="images/icon.ico">
@@ -132,6 +133,10 @@ if (isset($_POST["submit-btn"])) {
             <a id="login-link" href="admin.php">Admin</a>
         </div>
     </footer>
+    <div id="small-screen-warning">
+        <img id="phone_rotate" src="images/phone_rotate.gif" alt="phone_rotate">
+        <h3>Please, rotate your device to view the content of the page.</h3>
+    </div>
 </body>
 
 </html>
