@@ -100,7 +100,7 @@ if (isset($_POST["submit-btn"])) {
 
 <body>
     <main>
-        <h1>Thank you for taking the time to read provide answers for this survey.</h1>
+        <h1>Thank you for taking the time to read and provide answers for this survey.</h1>
         <div class="description">
             <h3>You can now exit the survey by closing this window.</h3>
             <p>Are you interested in doing the survey again? Click <a href="index.html">here</a>.</p>
